@@ -1,5 +1,5 @@
-#include <Adafruit_TiCoServo.h>
 #include <Arduino.h>
+#include <Adafruit_TiCoServo.h>
 #include <FastLED.h>
 
 #define NUM_LEDS  74  // 24(Ring 1) + 24(Ring 2) + 24(Ring 3) + 2(Eyes)
