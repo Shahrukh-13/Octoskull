@@ -15,6 +15,12 @@ I have added the PDF file of the paercraft in the /Papercraft/ folder. There are
 # Arduino
 I am using Arduino Mega 2560 to control 12 Servos, WS2812 RGB LEDs, 3 Relays. 
 
-The Reason I choose Arduino MEga 2560 is because I have both servos and WS2812 RGB LEDs in this project and if you use Arduino's servo library and FastLED library togeather is the same program, there are some issues: https://learn.adafruit.com/neopixels-and-servos/overview
+The Reason I choose Arduino MEga 2560 is because I have both servos and WS2812 RGB LEDs in this project and if you use Arduino's servo library and FastLED library togeather is the same program you will see some issues with the servos. You can read more about the issue here: https://learn.adafruit.com/neopixels-and-servos/overview
 
-Arduino Mega 2560 has 4 16-bit Timers and that allows us to control 12 servos. 
+The easy solution is to use Arduino Mega 2560 as it has 4 16-bit Timers and that allows us to control 12 servos on pins 2, 3, 5, 6, 7, 8, 11, 12, 13, 44, 45, 46. Adafruit has an alternate servo library called Adafruit_TiCoServo which makes it very easy to control servos on these pins.
+
+## Arduino Libraries
+I have the library files added in the Octoskull/Arduino/Library/ folder. I am also adding the Github links for the libraries here:
+
+1. Adafruit_TiCoServo: https://github.com/adafruit/Adafruit_TiCoServo
+2. FastLED: https://github.com/FastLED/FastLED
