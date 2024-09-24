@@ -239,7 +239,6 @@ void loop()
     long frame = floor(positionMillis / frameDurationMillis);
     int positionValue1 = (int)(pgm_read_float_near(Bone001 + frame));
     servo1.write(positionValue1);
-    //Serial.println(positionValue);
     
     int positionValue2 = (int)(pgm_read_float_near(Bone002 + frame));
     servo2.write(positionValue2);

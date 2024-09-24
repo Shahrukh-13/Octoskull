@@ -37,11 +37,12 @@ uint8_t res[5]; // Character array for storing read bytes
 uint8_t i;         // Varriable for incrementing char array index
 uint8_t servo_angle;
 
+
 void setup() 
 {
   Serial.begin(115200);
   Serial.flush();
-
+  
   pinMode(RELAY_PIN_1, OUTPUT);
   pinMode(RELAY_PIN_2, OUTPUT);
   pinMode(RELAY_PIN_3, OUTPUT);
