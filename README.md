@@ -5,6 +5,11 @@ This is my animatronic OctoSkull project. It is inspired by papercraft designer 
 
 When I saw her papercraft I immediately thought that it will look so awesome if the tentacels could move, so I made this project. The skull is made of paper and its design is taken from Methakura's free OctoSkull papercraft. The tentacles use different servos and the frame is built mostly with MG996/MG995 servo brackets (I had to use some acrylic pieces for the microservos).
 
+## System Block Diagram
+
+![System block diagram](https://github.com/user-attachments/assets/73065e0b-6e0c-43cb-8eb1-c5af19cf82d5)
+
+
 # Papercraft
 The skull is made of paper. The design of the skull is from Methakura's free OctoSkull papercraft. This is the link of the designer's website: https://methakura.gumroad.com/
 
