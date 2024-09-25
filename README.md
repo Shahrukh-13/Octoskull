@@ -25,6 +25,8 @@ In the blender project I have twelve armatures that represent the twelve servos,
 
 In live mode the unique servo ID is sent in the serial message to Arduino to control the corresponding servo. The serial message protocol is documented here: https://github.com/timhendriks93/blender-servo-animation?tab=readme-ov-file#command-protocol. Once the animation is exported, a bone[] array is generated for each servo. These bone[] arrays are used to play the animation in a loop.
 
+![Untitled1-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/0c589af7-0f9e-4d46-a625-a6eb0865f5d2)
+
 # Arduino
 I am using Arduino Mega 2560 to control 12 Servos, WS2812 RGB LEDs, 3 Relays. 
 
