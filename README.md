@@ -13,11 +13,13 @@ When I saw her papercraft I immediately thought that it will look so awesome if 
 The schematic and PCB layout are designed in Proteus Design Suite. The Proteus project and schematic PDF file is placed in Octoskull/Schematic-PCB/ folder. The PCB layout PDF file is placed in Octoskull/Schematic-PCB/PCB_layout_PDF folder.
 
 ## Schematic
-As you can see from the sysytem block diagram, electrically the circuit is very simple. A 12V PSU supplies power to Arduino Mega2560, 100W stepdown voltage regulator, LM2596 stepdown voltage regulator and to three 12V-Relays. The relays are used here to provide a delay for servo power. What I have seen before is that when Arduino and servo are powered up togeather, the servos twitch a little at startup before going to the position that is being written to them. I want to avoid this behaviour and an easy fix for this is to write the position to servo first and then enable power to them. In this circuit the relays are doing that, first Arduino writes the servo positions and then enables all the relays.
+As you can see from the sysytem block diagram, electrically the circuit is very simple. A 12V PSU supplies power to Arduino Mega2560, 100W stepdown voltage regulator, LM2596 stepdown voltage regulator and to three 12V-Relays. The relays are used here to provide a delay for servo power. What I have seen before is that when Arduino and servo are powered up togeather, the servos twitch a little at startup before going to the position that is being written to them. I want to avoid this behaviour and an easy fix for this is to write the position to servo first and then enable power to them. In this circuit the relays are doing that, first Arduino writes the servo positions and then enables all the relays to supply power to the servos and LEDs.
 
 ## PCB layout
+The PCB is designed for a single layer board (Ideally two layer board will be better), I am using a lot of jumpers in this layout which should be avoided. Now I know that the circuit works, I will move to a two layer PCB in the next rev. I will try to place all the components in a different way so it occupies less space.
 
 # Blender project
+![rec2-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/b761d5fa-6bb4-4942-a8d3-2af8f3955650)
 
 # Arduino
 I am using Arduino Mega 2560 to control 12 Servos, WS2812 RGB LEDs, 3 Relays. 
