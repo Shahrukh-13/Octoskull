@@ -7,7 +7,7 @@ When I saw her papercraft I immediately thought that it will look so awesome if 
 
 # System Block Diagram
 
-![System block diagram](https://github.com/user-attachments/assets/73065e0b-6e0c-43cb-8eb1-c5af19cf82d5)
+![System block diagram](https://github.com/user-attachments/assets/c866725b-1ebc-4fa3-847c-589de1a2305d)
 
 # Schematic and PCB layout
 The schematic and PCB layout are designed in Proteus Design Suite. The Proteus project and schematic PDF file is placed in Octoskull/Schematic-PCB/ folder. The PCB layout PDF file is placed in Octoskull/Schematic-PCB/PCB_layout_PDF folder.
@@ -19,7 +19,11 @@ As you can see from the sysytem block diagram, electrically the circuit is very 
 The PCB is designed for a single layer board (Ideally two layer board will be better), I am using a lot of jumpers in this layout which should be avoided. Now I know that the circuit works, I will move to a two layer PCB in the next rev. I will try to place all the components in a different way so it occupies less space.
 
 # Blender project
+In the blender project I have twelve armatures that represent the twelve servos, I have given Servo IDs 1-12. To setup armatures as servos you need to use Blender Servo Animation Add on: https://github.com/timhendriks93/blender-servo-animation. Once this addon is added you can set each armature as a servo and give it a unique ID.
+
 ![rec2-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/b761d5fa-6bb4-4942-a8d3-2af8f3955650)
+
+In live mode the unique servo ID is sent in the serial message to Arduino to control the corresponding servo. The serial message protocol is documented here: https://github.com/timhendriks93/blender-servo-animation?tab=readme-ov-file#command-protocol. Once the animation is exported, a bone[] array is generated for each servo. These bone[] arrays are used to play the animation in a loop.
 
 # Arduino
 I am using Arduino Mega 2560 to control 12 Servos, WS2812 RGB LEDs, 3 Relays. 
@@ -35,10 +39,10 @@ There are 2 arduino sketches in the Octoskull/Arduino/ folder. Following is the 
 
 ## Flowchart
 
-![flowchart](https://github.com/user-attachments/assets/860c42ba-71e0-4692-8a56-0b7f51b4f72e)
+![flowchart](https://github.com/user-attachments/assets/25cdc877-5eca-4f00-b7dd-fe03ea99a92a)
 ____________________________
 
-![flowchart2 drawio](https://github.com/user-attachments/assets/665cf169-e6b6-4228-97a2-1b1c16f7a7e5)
+![flowchart2 drawio (1)](https://github.com/user-attachments/assets/1f565036-1f94-49c3-a44e-1b38fa45d014)
 
 
 ## Arduino Libraries
