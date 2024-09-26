@@ -9,17 +9,6 @@ When I saw her papercraft I immediately thought that it will look so awesome if 
 
 ![System block diagram](https://github.com/user-attachments/assets/56c909b7-f053-4203-b530-0f9aa01125a2)
 
-# Schematic and PCB layout
-The schematic and PCB layout are designed in Proteus Design Suite. The Proteus project and schematic PDF file is placed in Octoskull/Schematic-PCB/ folder. The PCB layout PDF file is placed in Octoskull/Schematic-PCB/PCB_layout_PDF folder.
-
-## Schematic
-As you can see from the sysytem block diagram, electrically the circuit is very simple. A 12V PSU supplies power to Arduino Mega2560, Servo 1, 100W stepdown voltage regulator, LM2596 stepdown voltage regulator and to three 12V-Relays. The 100W stepdown voltage regulator is set to output 6.8V to power Servos 2,3,4,5,6,7 and 8. LM2596 voltage regulator module is set to output 5.2V to power Servo 9,10,11,12 and WS2812 RGB LEDs. The relays are used here to provide a delay for servo power. What I have seen in prvious projects is that when Arduino and servo are powered up togeather, the servos twitch a little at startup before going to the position that is being written to them. I want to avoid this behaviour and an easy fix for this is to write the position to servo first and then enable power to them. In this circuit the relays are doing that, first Arduino writes the servo positions and then enables all the relays to supply power to the servos and LEDs.
-
-There is a 2 pin SIL header for connecting a push button, but I am not using that rightnow. The idea was that on startup the Octoskull will take its intial pose, upon pressing the push button it will run its animation loop a few times and then stop. There is no external pull up or pull down resistor on the button pin, if you want to implement this feature use Arduino's Internal pull up resistor on the Button pin.
-
-## PCB layout
-The PCB is designed for a single layer board (Ideally two layer board will be better), I am using a lot of jumpers in this layout which should be avoided. Now I know that the circuit works, I will move to a two layer PCB in the next rev. I will also try to place all the components in a different way so it occupies less space on the board.
-
 # Blender project
 In the blender project I have twelve armatures that represent the twelve servos, I have given Servo IDs 1-12. To setup armatures as servos you need to use Blender Servo Animation Add on: https://github.com/timhendriks93/blender-servo-animation. Once this addon is added you can set each armature as a servo and give it a unique ID.
 
