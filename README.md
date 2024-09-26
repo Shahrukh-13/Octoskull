@@ -43,10 +43,3 @@ I have the library files added in the Octoskull/Arduino/Library/ folder. I am al
 
 1. Adafruit_TiCoServo: https://github.com/adafruit/Adafruit_TiCoServo
 2. FastLED: https://github.com/FastLED/FastLED
-
-# Papercraft
-The skull for this project is made of paper. The design of the skull is from Methakura's free OctoSkull papercraft. This is the link of the designer's website: https://methakura.gumroad.com/
-
-and this is the link of the OctoSkull papercraft where I took the skull from: https://methakura.gumroad.com/l/octoskull?layout=profile
-
-I have added the PDF file of the paercraft in the Octoskull//Papercraft/ folder. There are two versions of skull in this papercraft, if you want to make the one I made then use Page 1-8. The papercraft does not have the cutouts on the sides and the top of the skull, you will have to cut them out yourself and put WS2812 LED Rings inside. 
