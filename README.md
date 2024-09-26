@@ -3,29 +3,29 @@ This is my animatronic OctoSkull project. It is inspired by papercraft designer 
 
 ![Animatronic_octoskull](https://github.com/user-attachments/assets/35480357-565d-4985-833a-e7f81111822b)
 
-When I saw her papercraft I immediately thought that it will look so awesome if the tentacels could move, so I made this project. The skull is made of paper and its design is taken from Methakura's free OctoSkull papercraft. The tentacles use different servos and the frame is built mostly with MG996/MG995 compatible servo brackets (I had to use some acrylic pieces for the microservos).
+When I saw her papercraft I immediately thought that it will look so awesome if the tentacels could move, so I decided to make this animatronic project. The skull is made of paper and its design is taken from Methakura's free OctoSkull papercraft. The tentacles use different servos and the frame is built mostly with MG996/MG995 compatible servo brackets (I had to use some acrylic pieces for the microservos).
 
 # System Block Diagram
 
-![System block diagram](https://github.com/user-attachments/assets/c866725b-1ebc-4fa3-847c-589de1a2305d)
+![System block diagram](https://github.com/user-attachments/assets/56c909b7-f053-4203-b530-0f9aa01125a2)
 
 # Schematic and PCB layout
 The schematic and PCB layout are designed in Proteus Design Suite. The Proteus project and schematic PDF file is placed in Octoskull/Schematic-PCB/ folder. The PCB layout PDF file is placed in Octoskull/Schematic-PCB/PCB_layout_PDF folder.
 
 ## Schematic
-As you can see from the sysytem block diagram, electrically the circuit is very simple. A 12V PSU supplies power to Arduino Mega2560, 100W stepdown voltage regulator, LM2596 stepdown voltage regulator and to three 12V-Relays. The relays are used here to provide a delay for servo power. What I have seen before is that when Arduino and servo are powered up togeather, the servos twitch a little at startup before going to the position that is being written to them. I want to avoid this behaviour and an easy fix for this is to write the position to servo first and then enable power to them. In this circuit the relays are doing that, first Arduino writes the servo positions and then enables all the relays to supply power to the servos and LEDs.
+As you can see from the sysytem block diagram, electrically the circuit is very simple. A 12V PSU supplies power to Arduino Mega2560, 100W stepdown voltage regulator, LM2596 stepdown voltage regulator and to three 12V-Relays. The relays are used here to provide a delay for servo power. What I have seen in prvious projects is that when Arduino and servo are powered up togeather, the servos twitch a little at startup before going to the position that is being written to them. I want to avoid this behaviour and an easy fix for this is to write the position to servo first and then enable power to them. In this circuit the relays are doing that, first Arduino writes the servo positions and then enables all the relays to supply power to the servos and LEDs.
 
 ## PCB layout
-The PCB is designed for a single layer board (Ideally two layer board will be better), I am using a lot of jumpers in this layout which should be avoided. Now I know that the circuit works, I will move to a two layer PCB in the next rev. I will try to place all the components in a different way so it occupies less space.
+The PCB is designed for a single layer board (Ideally two layer board will be better), I am using a lot of jumpers in this layout which should be avoided. Now I know that the circuit works, I will move to a two layer PCB in the next rev. I will also try to place all the components in a different way so it occupies less space on the board.
 
 # Blender project
 In the blender project I have twelve armatures that represent the twelve servos, I have given Servo IDs 1-12. To setup armatures as servos you need to use Blender Servo Animation Add on: https://github.com/timhendriks93/blender-servo-animation. Once this addon is added you can set each armature as a servo and give it a unique ID.
 
 ![rec2-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/b761d5fa-6bb4-4942-a8d3-2af8f3955650)
 
-In live mode the unique servo ID is sent in the serial message to Arduino to control the corresponding servo. The serial message protocol is documented here: https://github.com/timhendriks93/blender-servo-animation?tab=readme-ov-file#command-protocol. Once the animation is exported, a bone[] array is generated for each servo. These bone[] arrays are used to play the animation in a loop.
-
 ![Untitled1-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/0c589af7-0f9e-4d46-a625-a6eb0865f5d2)
+
+In live mode the unique servo ID is sent in the serial message to Arduino to control the corresponding servo. The serial message protocol is documented here: https://github.com/timhendriks93/blender-servo-animation?tab=readme-ov-file#command-protocol. Once the animation is exported, a bone[] array is generated for each servo. These bone[] arrays are used to play the animation in a loop.
 
 # Arduino
 I am using Arduino Mega 2560 to control 12 Servos, WS2812 RGB LEDs, 3 Relays. 
@@ -58,4 +58,4 @@ The skull is made of paper. The design of the skull is from Methakura's free Oct
 
 and this is the link of the OctoSkull papercraft where I took the skull from: https://methakura.gumroad.com/l/octoskull?layout=profile
 
-I have added the PDF file of the paercraft in the /Papercraft/ folder. There are two versions of skull in this papercraft, if you want to make the one I made then use Page 1-8. The papercraft does not have the cutouts on the sides and the top of the skull, you will have to cut them out yourself and put WS2812 LED Rings inside. 
+I have added the PDF file of the paercraft in the Octoskull//Papercraft/ folder. There are two versions of skull in this papercraft, if you want to make the one I made then use Page 1-8. The papercraft does not have the cutouts on the sides and the top of the skull, you will have to cut them out yourself and put WS2812 LED Rings inside. 
