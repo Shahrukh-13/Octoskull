@@ -7,12 +7,15 @@ This is my animatronic OctoSkull project. It is inspired by papercraft designer 
 
 ![System block diagram](https://github.com/user-attachments/assets/56c909b7-f053-4203-b530-0f9aa01125a2)
 
+
 # Blender project
-In the blender project I have twelve armatures that represent the twelve servos, I have given Servo IDs 1-12. To setup armatures as servos you need to use Blender Servo Animation Add on: https://github.com/timhendriks93/blender-servo-animation. Once this addon is added you can set each armature as a servo and give it a unique ID.
+In the blender project I have 12 armatures that represent the 12 servos, I have given Servo IDs 1-12. To setup armatures as servos you need to use Blender Servo Animation Add on: https://github.com/timhendriks93/blender-servo-animation. Once this addon is added you can set each armature as a servo and give it a unique ID and start animating.
 
 ![rec2-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/b761d5fa-6bb4-4942-a8d3-2af8f3955650)
 
-![Untitled-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/7db05f69-5829-4325-89db-9edc4fb209ee)
+![Untitled-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/4abc5b3c-f902-4171-ad9a-c4f3d31b6cbc)
+
+![rec-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/e53a8de8-45bd-4be9-8f93-65f628051f99)
 
 In live mode the unique servo ID is sent in the serial message to Arduino to control the corresponding servo. The serial message protocol is documented here: https://github.com/timhendriks93/blender-servo-animation?tab=readme-ov-file#command-protocol. Once the animation is ready to be exported, Blender generates a bone[] array for each servo, these bone[] arrays are used to play the animation on Arduino in a loop.
 
@@ -21,7 +24,7 @@ I am using Arduino Mega 2560 to control 12 Servos, WS2812 RGB LEDs, 3 Relays.
 
 The Reason I choose Arduino Mega 2560 is because I have both servos and WS2812 RGB LEDs in this project and if you use Arduino's servo library and FastLED library together in the same program you will see some problems. The problem happens because of the interrupts, Arduino's servo library uses interrupts and FastLED disables innterupts when it is writting to the LEDs. You can read more about the issue here: https://learn.adafruit.com/neopixels-and-servos/overview
 
-The easy solution is to use Arduino Mega 2560 as it has 4 16-bit Timers, this allows us to control total 12 servos on pins 2, 3, 5, 6, 7, 8, 11, 12, 13, 44, 45, 46. For this I am using Adafruit_TiCoServo library.
+The easy solution is to use Arduino Mega 2560 as it has 4 16-bit Timers, this allows us to control total 12 servos on pins 2, 3, 5, 6, 7, 8, 11, 12, 13, 44, 45, 46. For controlling the servos on these pins I am using Adafruit_TiCoServo library.
 
 There are 2 arduino sketches in the Octoskull/Arduino/ folder. Following is the brief description of each sketch:
 
