@@ -7,7 +7,7 @@
   Bones: 12
   Armature: Armature
   Scene: Scene
-  File: octopus5.blend
+  File: octopuskull.blend
 */
 
 #include <Arduino.h>
