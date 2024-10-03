@@ -24,7 +24,7 @@ In live mode the unique servo ID is sent in the serial message to Arduino to con
 # Arduino
 I am using Arduino Mega 2560 to control 12 Servos, WS2812 RGB LEDs, 3 Relays. 
 
-The Reason I choose Arduino Mega 2560 is because I have both servos and WS2812 RGB LEDs in this project and if you use Arduino's servo library and FastLED library together in the same program you will see some problems. The problem happens because of the interrupts, Arduino's servo library uses interrupts and FastLED disables innterupts when it is writting to the LEDs. You can read more about the issue here: https://learn.adafruit.com/neopixels-and-servos/overview
+The Reason I choose Arduino Mega 2560 is because I have both servos and WS2812 RGB LEDs in this project. Arduino uses Servo Library for servos and FastLED library for WS2812 RGB LEDs. If you use Arduino's servo library and FastLED library together in the same program you will see some problems. The problem happens because of the interrupts, Arduino's servo library uses interrupts and FastLED disables innterupts when it is writting to the LEDs. You can read more about the issue here: https://learn.adafruit.com/neopixels-and-servos/overview
 
 The easy solution is to use Arduino Mega 2560 as it has 4 16-bit Timers, this allows us to control total 12 servos on pins 2, 3, 5, 6, 7, 8, 11, 12, 13, 44, 45, 46. For controlling the servos on these pins I am using Adafruit_TiCoServo library.
 
