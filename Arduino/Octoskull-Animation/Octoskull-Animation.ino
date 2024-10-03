@@ -150,8 +150,6 @@ const float Bone012[FRAMES] PROGMEM = {
 };
 
 
-long startMillis = millis();
-
 CRGB leds[NUM_LEDS];
 uint8_t colorIndex[NUM_LEDS];
 
@@ -164,13 +162,16 @@ DEFINE_GRADIENT_PALETTE( bhw3_51_gp )
   127, 252,250,237,
   160, 229, 43,233,
   204,  68,  6,212,
-  255,  19,  8, 93};
-
+  255,  19,  8, 93
+};
 
 CRGBPalette16 palette = bhw3_51_gp;
 
+long startMillis;
+
 void setup() 
 {
+  startMillis = millis();
   Serial.begin(9600);
 
   FastLED.addLeds<WS2812B, LED_PIN, GRB>(leds, NUM_LEDS);
