@@ -9,6 +9,10 @@ This is my animatronic OctoSkull project. It is inspired by papercraft designer 
 
 ![System block diagram](https://github.com/user-attachments/assets/56c909b7-f053-4203-b530-0f9aa01125a2)
 
+# Wiring Diagram
+
+![wiring diagram2](https://github.com/user-attachments/assets/9b809801-7683-48ff-946f-a6d95337a5d0)
+
 
 # Blender project
 In the blender project I have 12 armatures that represent the 12 servos, I have given Servo IDs 1-12. To setup armatures as servos you need to use Blender Servo Animation Add on: https://github.com/timhendriks93/blender-servo-animation. Once this addon is added you can set each armature as a servo and give it a unique ID and start animating.
