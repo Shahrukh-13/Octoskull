@@ -34,8 +34,9 @@ There are 2 arduino sketches in the Octoskull/Arduino/ folder. Following is the 
    
    ![proj2-ezgif com-optimize](https://github.com/user-attachments/assets/789d6243-eade-44c5-91e2-55e15ba3cc93)
 
-    
-2. **Octoskull-Animation_live.ino:** reads serial data coming from blender to control the servo motors. This lets you do live animation from blender. You can use this sketch to create the animation, export the data and copy it in the Octoskull-Animation.ino sketch to run in a loop. This sketch does not write to WS2812 RGB LEDs because that FastLED library disables the Interrupts and that causes problems with the Serial Reads.
+   I am using this color palette for the WS2812 LEDs: http://seaviewsensing.com/pub/cpt-city/bhw/bhw3/tn/bhw3_51.png.index.html
+   
+3. **Octoskull-Animation_live.ino:** reads serial data coming from blender to control the servo motors. This lets you do live animation from blender. You can use this sketch to create the animation, export the data and copy it in the Octoskull-Animation.ino sketch to run in a loop. This sketch does not write to WS2812 RGB LEDs because that FastLED library disables the Interrupts and that causes problems with the Serial Reads.
 
    ![proj1-ezgif com-video-to-gif-converter (1)](https://github.com/user-attachments/assets/8918cfcd-5076-467b-89e7-6b35a9a119b7)
 
