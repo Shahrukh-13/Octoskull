@@ -877,10 +877,11 @@ D53 |  
 
 ## Flowchart
 
-![flowchart](https://github.com/user-attachments/assets/25cdc877-5eca-4f00-b7dd-fe03ea99a92a)
+![flowchart](https://github.com/user-attachments/assets/0dd81954-4f96-428d-9692-03aec9823481)
+
 ____________________________
 
-![flowchart2 drawio (1)](https://github.com/user-attachments/assets/1f565036-1f94-49c3-a44e-1b38fa45d014)
+!![flowchart2 drawio (1)](https://github.com/user-attachments/assets/2ae2d6f7-8656-4c5a-92af-ed9b0903862a)
 
 
 ## Arduino Libraries
