@@ -11,7 +11,7 @@ This is my animatronic OctoSkull project. It is inspired by papercraft designer 
 
 
 # Blender project
-In the blender project I have 12 armatures that represent the 12 servos, I have given Servo IDs 1-12. To setup armatures as servos you need to use Blender Servo Animation Add on: https://github.com/timhendriks93/blender-servo-animation. Once this addon is added you can set each armature as a servo and give it a unique ID and start animating.
+In the blender project I have 12 armatures that represent the 12 servos, I have given them Servo IDs 1-12. I am using Blender's Inverse Kinematics constraint for armature posing. To setup armatures as servos you need to use Blender Servo Animation Add on: https://github.com/timhendriks93/blender-servo-animation. Once this addon is added you can set each armature as a servo and give it a unique ID and start animating. 
 
 ![rec2-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/b761d5fa-6bb4-4942-a8d3-2af8f3955650)
 
