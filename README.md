@@ -11,7 +11,7 @@ This is my animatronic OctoSkull project. It is inspired by papercraft designer 
 
 
 # Blender project
-In the blender project I have 12 armatures that represent the 12 servos, I have given Servo IDs 1-12. To setup armatures as servos you need to use Blender Servo Animation Add on: https://github.com/timhendriks93/blender-servo-animation. Once this addon is added you can set each armature as a servo and give it a unique ID and start animating.
+In the blender project I have 12 armatures that represent the 12 servos, I have given them Servo IDs 1-12. I am using Blender's Inverse Kinematics constraint for armature posing. To setup armatures as servos you need to use Blender Servo Animation Add on: https://github.com/timhendriks93/blender-servo-animation. Once this addon is added you can set each armature as a servo and give it a unique ID and start animating. 
 
 ![rec2-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/b761d5fa-6bb4-4942-a8d3-2af8f3955650)
 
@@ -34,8 +34,9 @@ There are 2 arduino sketches in the Octoskull/Arduino/ folder. Following is the 
    
    ![proj2-ezgif com-optimize](https://github.com/user-attachments/assets/789d6243-eade-44c5-91e2-55e15ba3cc93)
 
-    
-2. **Octoskull-Animation_live.ino:** reads serial data coming from blender to control the servo motors. This lets you do live animation from blender. You can use this sketch to create the animation, export the data and copy it in the Octoskull-Animation.ino sketch to run in a loop. This sketch does not write to WS2812 RGB LEDs because that FastLED library disables the Interrupts and that causes problems with the Serial Reads.
+   I am using this color palette for the WS2812 LEDs: http://seaviewsensing.com/pub/cpt-city/bhw/bhw3/tn/bhw3_51.png.index.html
+   
+3. **Octoskull-Animation_live.ino:** reads serial data coming from blender to control the servo motors. This lets you do live animation from blender. You can use this sketch to create the animation, export the data and copy it in the Octoskull-Animation.ino sketch to run in a loop. This sketch does not write to WS2812 RGB LEDs because that FastLED library disables the Interrupts and that causes problems with the Serial Reads.
 
    ![proj1-ezgif com-video-to-gif-converter (1)](https://github.com/user-attachments/assets/8918cfcd-5076-467b-89e7-6b35a9a119b7)
 
@@ -876,10 +877,12 @@ D53 |  
 
 ## Flowchart
 
-![flowchart](https://github.com/user-attachments/assets/25cdc877-5eca-4f00-b7dd-fe03ea99a92a)
+![flowchart](https://github.com/user-attachments/assets/0dd81954-4f96-428d-9692-03aec9823481)
+
 ____________________________
 
-![flowchart2 drawio (1)](https://github.com/user-attachments/assets/1f565036-1f94-49c3-a44e-1b38fa45d014)
+![flowchart2 drawio (1)](https://github.com/user-attachments/assets/ba984dd8-72c7-4428-9245-baab69310325)
+
 
 
 ## Arduino Libraries
