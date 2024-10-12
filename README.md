@@ -5,6 +5,7 @@ This is my animatronic OctoSkull project. It is inspired by papercraft designer 
 
 ![ID](https://github.com/user-attachments/assets/3ba2daf7-2128-4fa1-9399-556e03e06b6e)
 
+
 # System Block Diagram
 
 ![System block diagram](https://github.com/user-attachments/assets/56c909b7-f053-4203-b530-0f9aa01125a2)
@@ -13,13 +14,13 @@ This is my animatronic OctoSkull project. It is inspired by papercraft designer 
 # Blender project
 In the blender project I have 12 armatures that represent the 12 servos, I have given them Servo IDs 1-12. I am using Blender's Inverse Kinematics constraint for armature posing. To setup armatures as servos you need to use Blender Servo Animation Add on: https://github.com/timhendriks93/blender-servo-animation. Once this addon is added you can set each armature as a servo and give it a unique ID and start animating. 
 
-![rec2-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/b761d5fa-6bb4-4942-a8d3-2af8f3955650)
+![370792158-b761d5fa-6bb4-4942-a8d3-2af8f3955650-ezgif com-cut](https://github.com/user-attachments/assets/c71ab932-faf9-41b3-8b07-a7a628924821)
 
 ![Untitled-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/4abc5b3c-f902-4171-ad9a-c4f3d31b6cbc)
 
-![rec-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/e53a8de8-45bd-4be9-8f93-65f628051f99)
-
 In live mode the unique servo ID is sent in the serial message to Arduino to control the corresponding servo. The serial message protocol is documented here: https://github.com/timhendriks93/blender-servo-animation?tab=readme-ov-file#command-protocol. Once the animation is ready to be exported, Blender generates a bone[] array for each servo, these bone[] arrays are used to play the animation on Arduino in a loop.
+
+![rec-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/e53a8de8-45bd-4be9-8f93-65f628051f99)
 
 # Arduino
 I am using Arduino Mega 2560 to control 12 Servos, WS2812 RGB LEDs, 3 Relays. 
