@@ -6,9 +6,9 @@ This is my animatronic OctoSkull project. It is inspired by papercraft designer 
 ![ID](https://github.com/user-attachments/assets/3ba2daf7-2128-4fa1-9399-556e03e06b6e)
 
 # Video Links
-**Youtube Link:** 
+**Youtube Link:** https://www.youtube.com/watch?v=6EzSWKyqdc4
 
-**Instagram Link:**
+**Instagram Link:** https://www.instagram.com/reel/DBBsA4YJgy1/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==
 
 # System Block Diagram
 
