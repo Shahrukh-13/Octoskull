@@ -36,8 +36,7 @@ Adafruit_TiCoServo servo12;
 
 
 uint8_t data;     // for reading incoming byte over serial port 
-uint8_t res[5];  // Character array for storing read bytes
-uint8_t i;       // for incrementing char array index
+uint8_t res[5];  // array for storing 5 bytes sent by Blender over Serial port
 
 uint8_t servo_angle;
 
@@ -159,7 +158,7 @@ void loop()
 
 void Serial_Receive()
 {
-  i=0;   
+  uint8_t i=0;  
   while( data!= 0x3E)     
   {
     while(Serial.available())
