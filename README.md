@@ -1,5 +1,5 @@
 # Octoskull
-This is my animatronic OctoSkull project. It is inspired by H.R. Giger's work and papercraft designer Methakura's OctoSkull papercraft. When I saw her papercraft I immediately thought that it will look so awesome if the tentacels could move, so I decided to make this animatronic project. You can read the Wiki section for more details about the project: https://github.com/Shahrukh-13/Octoskull/wiki
+This is my animatronic OctoSkull project. It is inspired by H.R. Giger's work and papercraft designer Methakura's OctoSkull papercraft. When I saw Methakura's papercraft I immediately thought that it will look so awesome if the tentacels could move and  I wanted to make the tentacle look like xenomorhp's tail. So I decided to make this animatronic project. You can read the Wiki section for more details about the project: https://github.com/Shahrukh-13/Octoskull/wiki
 
 ![Animatronic_octoskull](https://github.com/user-attachments/assets/35480357-565d-4985-833a-e7f81111822b)
 
